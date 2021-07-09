@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "br.com.zupacademy.ratkovski";
+option java_outer_classname = "CarroGrpc";
+option objc_class_prefix = "HLW";
+
+package br.com.zupacademy.ratkovski;
+
+service CarroGrpcService {
+  rpc send (CarroGrpcRequest) returns (CarroGrpcReply) {}
+}
+
+message CarroGrpcRequest {
+  string name = 1;
+}
+
+message CarroGrpcReply {
+  string message = 1;
+}
