@@ -3,10 +3,12 @@ micronaut:
     name: carroGrpc
 datasources:
   default:
-    url: jdbc:mysql://localhost:3306/db
+    url: jdbc:mysql://localhost:3307/carros?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=true
     driverClassName: com.mysql.cj.jdbc.Driver
     username: root
-    password: ''
+    password: root
     schema-generate: CREATE_DROP
     dialect: MYSQL
 jpa.default.properties.hibernate.hbm2ddl.auto: update
+jpa.default.properties.hibernate.show_sql: true
+jpa.default.properties.hibernate.format_sql: true
